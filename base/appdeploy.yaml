@@ -3,26 +3,26 @@ kind: Deployment
 metadata:
   annotations: {}
   labels:
-    workload.user.cattle.io/workloadselector: apps.deployment-default-fleet
-  name: fleet-ck2
-  namespace: fleet-ck2
+    workload.user.cattle.io/workloadselector: apps.deployment-default-MyApp
+  name: MyApp
+  namespace: MyApp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      workload.user.cattle.io/workloadselector: apps.deployment-default-fleet
+      workload.user.cattle.io/workloadselector: apps.deployment-default-MyApp
   template:
     metadata:
       labels:
-        workload.user.cattle.io/workloadselector: apps.deployment-default-fleet
+        workload.user.cattle.io/workloadselector: apps.deployment-default-MyApp
     spec:
       containers:
-      - image: cklitscherp/fleet:38abb63b8ae6331329c825138367d02cecb0ab68
+      - image: cklitscherp/MyApp
         imagePullPolicy: Always
         name: container-0
         ports:
         - containerPort: 80
-          name: testck2
+          name: myapp-test
           protocol: TCP
         resources: {}
         terminationMessagePath: /dev/termination-log
