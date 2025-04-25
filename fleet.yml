@@ -1,5 +1,5 @@
 targetCustomizations:
- - name: fleet-ck2
+ - name: MyApp
    clusterName: ckdsc01
    kustomize:
      dir: base
