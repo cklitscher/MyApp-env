@@ -1,5 +1,5 @@
 targetCustomizations:
- - name: MyApp
+ - name: myapp
    clusterName: ckdsc01
    kustomize:
      dir: base
