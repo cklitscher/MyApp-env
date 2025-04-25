@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fleet-service
-  namespace: fleet-ck2
+  name: MyApp-service
+  namespace: MyApp
 spec:
   ports:
-  - name: test2
+  - name: myapp-test
     port: 80
     protocol: TCP
     targetPort: 80
   selector:
-    workload.user.cattle.io/workloadselector: apps.deployment-default-fleet
+    workload.user.cattle.io/workloadselector: apps.deployment-default-MyApp
   type: ClusterIP
 status:
   loadBalancer: {}
