@@ -3,21 +3,21 @@ kind: Deployment
 metadata:
   annotations: {}
   labels:
-    workload.user.cattle.io/workloadselector: apps.deployment-default-MyApp
-  name: MyApp
-  namespace: MyApp
+    workload.user.cattle.io/workloadselector: apps.deployment-default-myapp
+  name: myapp
+  namespace: myapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      workload.user.cattle.io/workloadselector: apps.deployment-default-MyApp
+      workload.user.cattle.io/workloadselector: apps.deployment-default-myapp
   template:
     metadata:
       labels:
-        workload.user.cattle.io/workloadselector: apps.deployment-default-MyApp
+        workload.user.cattle.io/workloadselector: apps.deployment-default-myapp
     spec:
       containers:
-      - image: cklitscherp/MyApp
+      - image: cklitscherp/myapp
         imagePullPolicy: Always
         name: container-0
         ports:
