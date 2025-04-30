@@ -6,7 +6,7 @@ metadata:
 spec:
   ports:
   - name: myapp-test
-    port: 80
+    port: 8088
     protocol: TCP
     targetPort: 80
   selector:
